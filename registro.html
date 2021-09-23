@@ -21,28 +21,28 @@
         </div>
     </header>
     <div id="container-formulario">
-        <form id="form-registro">
+        <form id="form-registro" onsubmit="return Valida(this)">
             <legend id="titulo">Registro</legend>
             <label id="label">Nombre</label>
-            <input type="text" id="input">
+            <input type="text" id="nombre" name="nombre">
             
             <label id="label">Apellidos</label>
-            <input type="text" id="input">
+            <input type="text" id="apellido" name="apellido">
             
             <label id="label">Telefono</label>
-            <input type="tel" id="input">
+            <input type="tel" id="telefono" name="telefono">
             
             <label id="label">Correo</label>
-            <input type="email" id="input">
+            <input type="email" id="correo" name="correo">
             
             <label id="label">Contraseña</label>
-            <input type="password" id="input">
+            <input type="password" id="password" name="password">
             
             <div id="divboton">
-                <input type="submit" id="btn-submit-form" value="Registrar">
+                <input type="submit" id="btn-submit-form" value="Registrar" onclick="checkNombre()">
             </div>
         </form>
     </div>
-
+    <script src="./js/form.js"></script>
 </body>
 </html>
