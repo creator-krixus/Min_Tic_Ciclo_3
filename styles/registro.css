@@ -55,6 +55,10 @@ img{
 }
 
 /*estilos del formulario*/
+#container-formulario{
+    margin-top: 2%;
+}
+
 #titulo{
     text-align: center;
     padding: 5px 20px 20px;
@@ -76,6 +80,7 @@ img{
     height: 20px;    
     width: 40%;
     margin-left: 10px;
+    margin-bottom: 2%;
 }
 
 #divboton{
