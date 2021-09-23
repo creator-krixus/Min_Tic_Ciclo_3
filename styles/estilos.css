@@ -8,7 +8,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    background-color: rgba(37, 199, 37, 0.808);      
+    background-color: rgb(92, 86, 86);      
     width: 100%;    
 }
 
@@ -34,7 +34,7 @@
     margin-right: 20px;
     padding: 5px 15px;
     border: none;
-    background-color: green;    
+    background-color: darkseagreen;    
 }
 
 #enlace-registro{
@@ -51,4 +51,32 @@
 img{
     margin-top: 2%;
     border-radius: 50%;
+}
+/*Estilos de la presentacion*/
+#container-presentacion{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color:darkseagreen;
+}
+#container-textos{
+    margin: auto;
+    margin-left: 5%;
+}
+#presentacion{
+    margin-bottom: 2%;
+    font-size: 150%;
+    color:white;
+}
+#titulo-presentacion{
+    font-size: 400%;
+    margin-bottom: 2%;
+}
+#parrafo-presentacion{
+    font-size: 200%;
+}
+#img-presentacion{
+    width: 100%;
+    height: 550px;
+    margin-top: 0;
 }
