@@ -54,17 +54,40 @@ img{
     border-radius: 50%;
 }
 
-/*estilos del formulario*/
+/*Estilos contenedor registro*/
+#container-registro{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    background-color: darkseagreen;
+}
+
+/*estilos contenedor de la imagen y el titulo*/
+
+#imagen-puzzle{
+    padding-left: 45%;
+   margin-top: -45%;
+
+}
+#titulo-descriptivo-registro{
+    margin-top: 14%;
+    margin-left: 8%;
+    font-size: 30px;
+}
+
+/*estilos del contenedor del formulario*/
+
 #container-formulario{
     padding: 2%;
-    height: 510px;
-    background-color: darkseagreen;
+    width: 35%;
+    margin-left: 31%;
 }
 
 #titulo{
     text-align: center;
     padding: 5px 20px 20px;
-    background-color: rgba(37, 199, 37, 0.808);    
+    /* background-color: rgba(37, 199, 37, 0.808);  */   
     border-radius: 10px 10px 0 0;    
 }
 
@@ -102,7 +125,7 @@ img{
 #form-registro{
     
     border-radius: 10px;
-    background-color:rgb(238, 238, 238);    
+    /* background-color:rgb(238, 238, 238);  */   
     width: 40%;
     margin: auto;
 }

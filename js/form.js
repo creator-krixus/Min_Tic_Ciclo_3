@@ -4,10 +4,8 @@ let checkNombre = (valor) =>{
     if (!(nombre.test(valor.nombre.value))) {
         alert('Campo nombre incorrecto el campo debe contener minimo 4 carateres y maximo 30');
         return false;
-    }else{
-        alert('Campo nombre correcto')
-        return true;
     }
+    return true;
 }
 
 let checkApellido = (valor) => {
@@ -16,10 +14,8 @@ let checkApellido = (valor) => {
     if (!(apellido.test(valor.apellido.value))) {
         alert('Campo apellido incorrecto');
         return false;
-    }else{
-        alert('Campo apellido correcto')
-        return true;
     }
+    return true;
 }
 
 let checkTelefono = (valor) => {
@@ -28,10 +24,8 @@ let checkTelefono = (valor) => {
     if (!(telefono.test(valor.telefono.value))) {
         alert('Contenido de campo telefono debe contener 7 digitos');
         return false;
-    }else{
-        alert('Campo telefono correcto')
-        return true;
     }
+    return true;
 }
 
 let checkCorreo = (valor) => {
@@ -40,10 +34,8 @@ let checkCorreo = (valor) => {
     if (!(email.test(valor.email.value))) {
         alert('Campo email no es correcto ');
         return false;
-    }else{
-        alert('Campo email correcto')
-        return true;
     }
+    return true;
 }
  let CheckContrasena = (valor) => {
     /* validación del password */
@@ -51,10 +43,8 @@ let checkCorreo = (valor) => {
     if (!(password.test(valor.password.value))) {
         alert('Campo nombre incorrecto');
         return false;
-    }else{
-        alert('Password correcto')
-        return true;
     }
+    return true;
  }
 
 let Valida = (valor) => {
