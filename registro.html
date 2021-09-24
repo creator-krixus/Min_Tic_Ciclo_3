@@ -3,29 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <title>Registro</title>
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="./styles/registro.css">
+    <link rel="shortcut icon" href="./images/favico.png">
 </head>
 <body>
-    <form id="form-registro">
-        <legend id="titulo">Regristro</legend>
-        <label id="label">Nombre</label>
-        <input type="text" id="input">
-        <br>
-        <label id="label">Apellidos</label>
-        <input type="text" id="input">
-        <br>
-        <label id="label">Telefono</label>
-        <input type="tel" id="input">
-        <br>
-        <label id="label">Correo</label>
-        <input type="email" id="input">
-        <br>
-        <label id="label">Contraseña</label>
-        <input type="password" id="input">
-        <br>
-        <div id="divboton">
-            <input type="submit" id="btn-submit-form" value="Registrar">
+    <header>
+        <div id="registro">
+            <a href="index.html" id="cabezote"><img src="./images/g9.png" width="90px" height="90px"></a>
+            <div id="contenedor-btn">
+                <li id="nav"><a href="index.html" id="enlace-home">Home</a></li>
+                <li id="nav"> 
+                    <button type="button" id="btn-registrar">
+                        <a href="registro.html" id="enlace-registro">Registrarse</a>
+                    </button>
+                </li>
+            </div>
         </div>
-    </form>
+    </header>
+    <div id="container-registro">
+        <div id="container-imagen">
+            <h2 id="titulo-descriptivo-registro">Discover the world is<br> top creative.</h2>
+            <img src="./images/App development-rafiki.svg" width="200%"   id="imagen-puzzle">
+        </div>
+        <div id="container-formulario">
+            <form id="form-registro" onsubmit="return Valida(this)">
+                <legend id="titulo">Registro</legend>
+                <label id="label">Nombre</label>
+                <input type="text" id="nombre" name="nombre">
+                
+                <label id="label">Apellidos</label>
+                <input type="text" id="apellido" name="apellido">
+                
+                <label id="label">Telefono</label>
+                <input type="tel" id="telefono" name="telefono">
+                
+                <label id="label">Correo</label>
+                <input type="email" id="correo" name="correo">
+                
+                <label id="label">Contraseña</label>
+                <input type="password" id="password" name="password">
+                
+                <div id="divboton">
+                    <input type="submit" id="btn-submit-form" value="Registrar" onclick="checkNombre()">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="./js/form.js"></script>
 </body>
 </html>

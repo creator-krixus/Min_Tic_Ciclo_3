@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#registro{ 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: rgb(92, 86, 86);      
+    width: 100%;    
+}
+
+#cabezote{
+    margin-left: 2%;
+}
+
+#contenedor-btn{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 2%;
+}
+
+#nav{
+    list-style: none;
+    margin-left: 20px;
+}
+
+#btn-registrar{
+    border-radius: 7px;
+    margin-right: 20px;
+    padding: 5px 15px;
+    border: none;
+    background-color: darkseagreen;    
+}
+
+#enlace-registro{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#enlace-home{
+    color: white;
+    text-decoration: none;
+    font-size: 23px;
+}
+img{
+    margin-top: 2%;
+    border-radius: 50%;
+}
+/*Estilos de la presentacion*/
+#container-presentacion{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color:darkseagreen;
+}
+#container-textos{
+    margin: auto;
+    margin-left: 5%;
+}
+#presentacion{
+    margin-bottom: 2%;
+    font-size: 150%;
+    color:white;
+}
+#titulo-presentacion{
+    font-size: 400%;
+    margin-bottom: 2%;
+}
+#parrafo-presentacion{
+    font-size: 200%;
+}
+#img-presentacion{
+    width: 100%;
+    height: 550px;
+    margin-top: 0;
+}
