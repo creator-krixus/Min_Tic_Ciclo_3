@@ -145,3 +145,80 @@ img{
     width: 33%;
     position: relative;
 }
+
+footer{    
+    width: 100%;    
+    padding:50px 0px;
+    *background-image: url(../images/background-footer.svg);
+    *background-size: cover; /*hace que la imagen se acomple al tamaño del elemento*/
+
+    /*con estas propiedades logramos cambiar el color de la imagen de fondo*/
+    background-color: #0E0B16;
+    -webkit-mask-image: url(../images/background-footer.svg);
+    mask-image: url(../images/background-footer.svg);
+    -webkit-mask-size: cover;
+    mask-size: cover;    
+} 
+
+ .container{
+    display: flex; /*acomoda los elementos unos al lado de otros*/
+    flex-wrap: wrap; /*Hace que los elementos se pongan uno debajo del otro cuando el espacio no es suficiente para estar en linea*/
+    justify-content: space-between; /* para que mantengan una posicion estirada y puedan ocupar el ancho completo*/
+    max-width: 1200px;
+    margin: auto;    
+}
+
+.box_footer{
+    display: flex;
+    flex-direction: column; /*pone sus elementos en columna*/
+    padding: 40px;
+}
+
+.box_footer .box_image img{
+    width: 50px;
+}
+
+.box_footer .description{
+    max-width: 350px;
+    margin-top: 30px;
+    font-weight: 500;
+    color: #7a7a7a;
+    font-size: 18px;
+}
+
+.box_footer h2{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: #343434;
+    font-weight: 700;
+}
+
+.box_footer a{
+    margin-top: 10px;
+    color: #7a7a7a;
+    font-weight: 600;
+    text-decoration: none;
+
+}
+
+.box_footer a:hover{
+    opacity: 0.8; /*cambiamos la opacidad de los links*/
+}
+
+.box_copyright{
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 0 40px;
+}
+
+.box_copyright p{
+    margin-top: 20px;
+    color: #7a7a7a;
+}
+
+.box_copyright hr{
+    border: none;
+    height: 1px;
+    background-color: #7a7a7a;
+}
