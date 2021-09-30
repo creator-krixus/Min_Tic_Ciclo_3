@@ -29,9 +29,6 @@ const agregarRegistro = () => {
 function ordenarArreglo(arreglo){
     //creamos una funcion que compara el valor unicode para posicionar en orden alfabetico
     arreglo.sort((a,b) => {
-        console.log(a);
-        console.log(b)
-        
         //convertimos los apellidos a minuscula
         const apellidoA = a.apellido.toLowerCase();
         const apellidoB = b.apellido.toLowerCase();
