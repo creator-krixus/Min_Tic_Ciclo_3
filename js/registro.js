@@ -16,6 +16,7 @@ const agregarRegistro = () => {
  }
  arreglo.push(registro);
  console.log(arreglo)
+ filtrarCorreo(arreglo);
  document.getElementById('nombre').value = "";
  document.getElementById('apellido').value = "";
  document.getElementById('telefono').value = "";
@@ -24,7 +25,5 @@ const agregarRegistro = () => {
 
 }
 
-const ordenarArreglo = (arreglo) => {
- return true;
-}
-module.exports = {agregarRegistro, ordenarArreglo}
+
+module.exports = {agregarRegistro, ordenarArreglo, filtrarCorreo}
