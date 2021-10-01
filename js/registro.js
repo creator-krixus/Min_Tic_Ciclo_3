@@ -1,26 +1,23 @@
-let arreglo = [];
-let nombre = "";
-let apellido = "";
-let telefono = "";
-let correo = "";
-let password = ""
+let registros = [];
 
-const agregarRegistro = () => {
+
+function agregarRegistro () {
     
- let registro = {
-     'nombre' : document.getElementById('nombre').value,
-     'apellido' : document.getElementById('apellido').value,
-     'telefono' : document.getElementById('telefono').value,
-     'correo' : document.getElementById('correo').value,
-     'password' : document.getElementById('password').value,
- }
- arreglo.push(registro);
- console.log(arreglo); 
- document.getElementById('nombre').value = "";
- document.getElementById('apellido').value = "";
- document.getElementById('telefono').value = "";
- document.getElementById('correo').value = "";
- document.getElementById('password').value = "";
+    let registro = document.getElementsByTagName("input");
+    
+    
+    
+    let datosUsuario = {
+        'nombre' : registro[0].value,
+        'apellido' : registro[1].value,
+        'telefono' : registro[2].value,
+        'correo' : registro[3].value,
+        'password' : registro[4].value
+    }   
+    
+    registros.push(datosUsuario); 
+    console.log(registros);
+    
 
 }
 
@@ -48,13 +45,12 @@ function ordenarArreglo(arreglo){
     });
     
     console.log(arreglo);    
-            
+    return arreglo;            
 }
 
 
 //filtra los correos que terminan en gmail.com
 function filtrarCorreo(arreglo){
-    
 
     let arreglo2 = [];
     //recorremos el arreglo para identificar cuales objetos tienen el correo gmail.com
@@ -64,13 +60,17 @@ function filtrarCorreo(arreglo){
         }
     }    
     console.log(arreglo2);
+    return arreglo2;
 }
 
 //Hicimos el llamado de todas las funciones para propar su efectividad
 function llamarFunciones(){
     agregarRegistro();
-    ordenarArreglo(arreglo);
-    filtrarCorreo(arreglo);
+    ordenarArreglo(registros);
+    filtrarCorreo(registros);
 }
 
-module.exports = {agregarRegistro, ordenarArreglo, filtrarCorreo}
+module.exports.registros = registros;
+module.exports.agregarRegistro = agregarRegistro;
+module.exports.ordenarArreglo = ordenarArreglo;
+module.exports.filtrarCorreo = filtrarCorreo;
