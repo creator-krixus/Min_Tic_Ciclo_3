@@ -2,14 +2,17 @@
     margin: 0;
     padding: 0;
 }
-
+body{
+    position: relative;
+}
+/*==================================Extilos Header=====================================*/
+/*=====================================================================================*/
 #registro{ 
-    
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    background-color:#fff;      
+    background-color: #e3e3e3e3;      
     width: 100%;    
 }
 
@@ -35,7 +38,7 @@
     margin-right: 20px;
     padding: 5px 15px;
     border: none;
-    background-color: darkseagreen;    
+    background-color: purple;    
 }
 
 #enlace-registro{
@@ -54,12 +57,13 @@ img{
 }
 
 
-/*Estilos de la presentacion*/
+/*================================Estilos de la presentacion============================*/
+/*======================================================================================*/
 #container-presentacion{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color:gray;
+    background-color:#f9f9f9;
 }
 #container-textos{
     margin: auto;
@@ -68,7 +72,7 @@ img{
 #presentacion{
     margin-bottom: 2%;
     font-size: 150%;
-    color:white;
+    color:purple;
 }
 #titulo-presentacion{
     font-size: 400%;
@@ -83,14 +87,15 @@ img{
     margin-top: 0;
 }
 
-/*Estilos ofertas*/
+/*==========================================Estilos ofertas=============================*/
+/*======================================================================================*/
 
 #container-oferta{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+    background-color: #e3e3e3e3;
 }
 #container-oferta-parrafo{
     margin-top: 7%;
@@ -102,7 +107,8 @@ img{
     margin-bottom: 7%;
 }
 
-/*Estilos contenedor imagenes*/
+/*=============================Estilos contenedor imagenes==============================*/
+/*======================================================================================*/
 
 #contenedor-imagenes{
     width: 100%;
@@ -110,9 +116,10 @@ img{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    background-color: #e3e3e3e3;
 }
 #contenedor-imagen-uno{
-    background-color: gray;
+    background-color: #f9f9f9;
     border-radius: 2%;
     width: 33%; 
     position: relative;
@@ -126,7 +133,7 @@ img{
     font-size: 35px;
 }
 #contenedor-imagen-dos{
-    background-color: gray;
+    background-color: #f9f9f9;
     border-radius: 2%;
     width: 33%;
     position: relative;
@@ -140,20 +147,24 @@ img{
     font-size: 35px;
 }
 #contenedor-imagen-tres{
-    background-color: gray;
+    background-color: #f9f9f9;
     border-radius: 2%;
     width: 33%;
     position: relative;
 }
-
-footer{    
+/*======================================Estilos Footer=================================*/
+/*======================================================================================*/
+footer{   
+    /*Se le agrego una posicion relativa para poderlo pegar un poco a la anterior seccion*/
+    position: absolute; 
+    top: 95.5%;
     width: 100%;    
     padding:50px 0px;
     *background-image: url(../images/background-footer.svg);
     *background-size: cover; /*hace que la imagen se acomple al tamaño del elemento*/
 
     /*con estas propiedades logramos cambiar el color de la imagen de fondo*/
-    background-color: #0E0B16;
+    background-color: #e3e3e3e3;
     -webkit-mask-image: url(../images/background-footer.svg);
     mask-image: url(../images/background-footer.svg);
     -webkit-mask-size: cover;
@@ -222,3 +233,77 @@ footer{
     height: 1px;
     background-color: #7a7a7a;
 }
+/*====================================Estilos complemento==============================*/
+/*=====================================================================================*/
+.contenedor {
+    width: 100%;
+    height: 30rem;
+    position: relative;
+    background-color: #f9f9f9;
+  }
+  
+  .contenedor__uno {
+    width: 15%;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: purple;
+    left: 25%;
+    top: 25%;
+  }
+  
+  .contenedor__dos {
+    width: 15%;
+    height: 200px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #fff;
+    left: 30%;
+    top: 35%;
+  }
+  
+  .contenedor__dos .number {
+    color: purple;
+    font-size: 300%;
+  }
+  
+  .contenedor__dos h2 {
+    text-align: center;
+    margin-top: 8%;
+  }
+  
+  .contenedor__tres {
+    width: 5%;
+    height: 70px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: purple;
+    left: 50%;
+    top: 15%;
+  }
+  
+  .contenedor__cuatro {
+    width: 3%;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: purple;
+    left: 52%;
+    top: 31%;
+  }
+  
+  .contenedor__cinco {
+    position: absolute;
+    left: 70%;
+    top: 10%;
+  }
+  
+  .contenedor__cinco h2 {
+    color: purple;
+    font-size: 40px;
+  }
+  
+  .contenedor__cinco p {
+    margin-bottom: 20%;
+    font-size: 30px;
+  }

@@ -3,13 +3,16 @@
     margin: 0;
     padding: 0;
 }
+body{
+    position: relative;
+}
 
 #registro{ 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    background-color: rgb(92, 86, 86);      
+    background-color: #e3e3e3;      
     width: 100%;    
 }
 
@@ -45,7 +48,7 @@
 }
 
 #enlace-home{
-    color: white;
+    /* color: white; */
     text-decoration: none;
     font-size: 23px;
 }
@@ -54,16 +57,17 @@ img{
     border-radius: 50%;
 }
 
-/*Estilos contenedor registro*/
+/*==================================Estilos contenedor registro========================*/
+/*=====================================================================================*/
 #container-registro{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    
-    background-color: darkseagreen;
+    background-color: #f9f9f9;
 }
 
-/*estilos contenedor de la imagen y el titulo*/
+/*========================Estilos contenedor de la imagen y el titulo===================*/
+/*======================================================================================*/
 
 #imagen-puzzle{
     padding-left: 45%;
@@ -76,7 +80,8 @@ img{
     font-size: 30px;
 }
 
-/*estilos del contenedor del formulario*/
+/*============================Estilos del contenedor del formulario=====================*/
+/*======================================================================================*/
 
 #container-formulario{
     padding: 2%;
@@ -117,7 +122,7 @@ img{
     margin: 30px 0 20px;    
     padding: 5px 30px;
     border-radius: 8px;
-    background-color: green;
+    background-color: purple;
     color: white;
     border: none;    
 }
@@ -128,4 +133,84 @@ img{
     /* background-color:rgb(238, 238, 238);  */   
     width: 40%;
     margin: auto;
+}
+/*========================================Estilos Footer===============================*/
+/*=====================================================================================*/
+footer{   
+    position: absolute;
+    top: 85%; 
+    width: 100%;    
+    padding:50px 0px;
+    background-image: url(../images/background-footer.svg);
+    background-size: cover; /*hace que la imagen se acomple al tamaño del elemento*/
+
+    /*con estas propiedades logramos cambiar el color de la imagen de fondo*/
+    background-color: #e3e3e3e3;
+    -webkit-mask-image: url(../images/background-footer.svg);
+    mask-image: url(../images/background-footer.svg);
+    -webkit-mask-size: cover;
+    mask-size: cover;    
+} 
+
+ .container{
+    display: flex; /*acomoda los elementos unos al lado de otros*/
+    flex-wrap: wrap; /*Hace que los elementos se pongan uno debajo del otro cuando el espacio no es suficiente para estar en linea*/
+    justify-content: space-between; /* para que mantengan una posicion estirada y puedan ocupar el ancho completo*/
+    max-width: 1200px;
+    margin: auto;    
+}
+
+.box_footer{
+    display: flex;
+    flex-direction: column; /*pone sus elementos en columna*/
+    padding: 40px;
+}
+
+.box_footer .box_image img{
+    width: 50px;
+}
+
+.box_footer .description{
+    max-width: 350px;
+    margin-top: 30px;
+    font-weight: 500;
+    color: #7a7a7a;
+    font-size: 18px;
+}
+
+.box_footer h2{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: #343434;
+    font-weight: 700;
+}
+
+.box_footer a{
+    margin-top: 10px;
+    color: #7a7a7a;
+    font-weight: 600;
+    text-decoration: none;
+
+}
+
+.box_footer a:hover{
+    opacity: 0.8; /*cambiamos la opacidad de los links*/
+}
+
+.box_copyright{
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 0 40px;
+}
+
+.box_copyright p{
+    margin-top: 20px;
+    color: #7a7a7a;
+}
+
+.box_copyright hr{
+    border: none;
+    height: 1px;
+    background-color: #7a7a7a;
 }
