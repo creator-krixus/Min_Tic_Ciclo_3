@@ -1,11 +1,9 @@
 let registros = [];
 
 
-function agregarRegistro () {
+let agregarRegistro = () => {
     
     let registro = document.getElementsByTagName("input");
-    
-    
     
     let datosUsuario = {
         'nombre' : registro[0].value,
@@ -17,13 +15,12 @@ function agregarRegistro () {
     
     registros.push(datosUsuario); 
     console.log(registros);
-    
 
 }
 
 
 // ordena el arreglo de forma ascendente segun el apellido
-function ordenarArreglo(arreglo){
+let ordenarArreglo = arreglo => {
     //creamos una funcion que compara el valor unicode para posicionar en orden alfabetico
     arreglo.sort((a,b) => {
         //convertimos los apellidos a minuscula
@@ -47,7 +44,7 @@ function ordenarArreglo(arreglo){
 
 
 //filtra los correos que terminan en gmail.com
-function filtrarCorreo(arreglo){
+let filtrarCorreo = arreglo => {
 
     let arreglo2 = [];
     //recorremos el arreglo para identificar cuales objetos tienen el correo gmail.com
