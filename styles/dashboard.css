@@ -66,7 +66,7 @@ body {
 
 .dashboard .main .search form span {
     position: absolute;
-    left: 15px;
+    left:90%;
     top: 10px;
     color: #727272;
 }
@@ -280,3 +280,68 @@ body {
         margin-top: 15px;
     }
 }
+
+/*=====================================================================================
+                                Media Query 1024px
+=======================================================================================*/
+
+@media only screen and (min-width: 1024px){
+    .dashboard .navigation,
+    .dashboard .navigation div span,
+    .dashboard .secondary{
+        display: block;
+    }
+  
+    .dashboard .navigation{
+        margin-top: 0px;
+        width: 50px;
+        position: fixed;
+        z-index: 10;
+    }
+    .dashboard .navigation div{
+        margin-left: 25px;
+    }
+    div.main{
+        width: 60%;
+        margin-left: 120px;
+        margin-right: 20px;
+    }
+    div.secondary{
+        width: 27%;
+        padding-top: 0px;
+        position: absolute;
+        top: 20px;
+        right: 0px;
+        background-color: transparent;
+    }
+
+    div.secondary .chart,
+    div.secondary .recent_project {
+        width: 100%;
+        border-radius: 10px;
+    }
+    .dashboard .navigation div{
+        margin-top: 10vh;
+        margin-bottom: 10vh;
+    }
+    .dashboard .navigation div span{
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+    }
+    .dashboard .main .search form span {
+        
+        left:95%;
+        
+        
+    }
+}
+
+@media only screen and (min-width: 1111px){
+    div.main .project_list .project{
+        width: 32%;
+    }
+    .main{
+        width: 65%;
+    }
+}
+
