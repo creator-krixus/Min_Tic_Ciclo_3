@@ -33,12 +33,13 @@
 .contenedor__fondo {
     position: absolute;
     right: 10px;
-    top: 0;
+    top: 6%;
 }
 .contenedor__logo{
     position: absolute;
     top: 2px;
-    right: 10px;
+    left: 10px;
+    margin-top: 1%;
 }
 .contenedor__logo img{
     border-radius: 50%;
