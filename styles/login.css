@@ -35,3 +35,11 @@
     right: 10px;
     top: 0;
 }
+.contenedor__logo{
+    position: absolute;
+    top: 2px;
+    right: 10px;
+}
+.contenedor__logo img{
+    border-radius: 50%;
+}
