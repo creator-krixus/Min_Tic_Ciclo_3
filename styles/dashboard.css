@@ -24,14 +24,14 @@ body {
 }
 
 .dashboard .navigation img.logo {
-    width: 90px;
-    height: 90px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
 }
 
 .dashboard .navigation img.user {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
 }
 
