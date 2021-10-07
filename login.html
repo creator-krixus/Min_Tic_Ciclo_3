@@ -18,13 +18,24 @@
         <div class="contenedor__datos">
             <h1>Welcome</h1>
             <p>Log in your account</p>
-            <form action="">
-                <input type="text" placeholder="User">
-                <input type="text" placeholder="Password">
-                <a href="dashboard.html">Log In</a>
+            <form action="" id="form">
+                <div class="form">
+                    <div class="group">
+                        <input type="text" id="name" required> <span class="barra"></span>   
+                        <label for="">Nombre</label>
+                    </div>
+                    <div class="group">
+                        <input type="password" id="password" required> <span class="barra"></span>
+                        <label for="">Password</label>
+                    </div>        
+                    <div class="boton">
+                        <a onclick="admin()" id="redireccion">Log In</a>
+                    </div>        
+                    
+                </div>
             </form>
             <p>Don't have an account?</p>
-            <a href="registro.html">Sign Up!</a>
+            <a href="registro.html">Sign Up!</a>            
         </div>
     </div>
     <div class="contenedor__fondo">
@@ -35,5 +46,6 @@
         
     </div>
     
+    <script src="js/pageAdmin.js"></script>
 </body>
 </html>
