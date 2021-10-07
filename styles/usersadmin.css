@@ -1,0 +1,65 @@
+body{
+    background-color: #e3e3e3;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* buscador */
+#search-user{
+    width: 100%;
+    margin-bottom: 40px;
+    background: none;
+    border: 1px solid rgb(212, 212, 212) ;
+    padding: 10px 0;      
+    
+}
+
+.material-icons-outlined{
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    
+}
+
+/* tabla de usuarios */
+#search-user:focus{
+    outline: none;    
+}
+
+
+#container-tabla{
+    width: 1000px;
+    margin-top: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+}
+
+table{
+    width: 100%;
+    background-color: white;
+    text-align: left;
+    border-collapse: collapse;
+    
+}
+
+th{    
+    padding: 0;
+    padding: 20px;
+    background: #e3e3e3;
+    border-bottom: solid 5px ;
+}
+
+tr:hover td{
+    background-color:#b06ab3;
+    color: white;
+}
+
+#container-botones{
+    width: 100%;
+    text-align: center;
+}
+
+
+#icono a img{
+    border-radius: 50%;
+}
