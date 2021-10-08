@@ -34,7 +34,7 @@ body{
     position: relative;
 }
 
-table{
+#tabla-contenido{
     width: 100%;
     background-color: white;
     text-align: left;
@@ -42,14 +42,14 @@ table{
     
 }
 
-th{    
+#tabla-contenido th{    
     padding: 0;
     padding: 20px;
     background: #e3e3e3;
     border-bottom: solid 5px ;
 }
 
-tr:hover td{
+#tabla-contenido tr:hover td{
     background-color:#b06ab3;
     color: white;
 }
@@ -67,4 +67,48 @@ tr:hover td{
 #btn-edit-data{
     text-decoration: none;
     color: black;
+}
+
+.modal{
+    background-color: rgba(0,0,0,.8);
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    opacity:0;
+    pointer-events:none;
+    transition: ease 0.5s;  
+    
+}
+
+.modal-contenido{
+    background-color:#e3e3e3;
+    width: 1000px;
+    padding: 30px 20px;
+    margin: 20% auto;
+    position: relative;       
+}
+
+#form-editar{
+    position: relative;
+}
+
+#tittle{
+    margin: 0px 45%;
+}
+
+#form-editar #tabla-editar{
+    margin: 40px 11%;    
+}
+
+#save{
+    position: absolute;    
+    right: 50.5%;
+    bottom: -50px;
+}
+
+#miModal:target{
+    opacity:1;
+    pointer-events:auto;
 }
