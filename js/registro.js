@@ -1,5 +1,23 @@
 let registros = [];
 
+let input = document.getElementById("btn-submit-form")
+
+input.addEventListener('click', () => {
+    axios({
+        method: 'POST',
+        url:'http://localhost:3000/Usuarios',
+        data:  {
+            'nombre' : document.getElementById("nombre").value,
+            'apellido' : document.getElementById("apellido").value,
+            'telefono' : document.getElementById("telefono").value,
+            'correo' : document.getElementById("correo").value,
+            'contrasena' : document.getElementById("password").value
+        } 
+    })
+    .then(res=>console.log(res.data))
+    .catch(err => console.log(err))
+
+})
 
 let agregarRegistro = () => {
     
@@ -17,6 +35,7 @@ let agregarRegistro = () => {
     console.log(registros);
 
 }
+
 
 
 // ordena el arreglo de forma ascendente segun el apellido
@@ -64,7 +83,7 @@ function llamarFunciones(){
     filtrarCorreo(registros);
 }
 
-module.exports.registros = registros;
+/* module.exports.registros = registros;
 module.exports.agregarRegistro = agregarRegistro;
 module.exports.ordenarArreglo = ordenarArreglo;
-module.exports.filtrarCorreo = filtrarCorreo;
+module.exports.filtrarCorreo = filtrarCorreo; */

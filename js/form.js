@@ -69,4 +69,4 @@ let Valida = (valor) => {
     return true;
 }
 
-module.exports = {checkNombre, checkApellido, checkTelefono, checkCorreo, CheckContrasena}
+/* module.exports = {checkNombre, checkApellido, checkTelefono, checkCorreo, CheckContrasena} */
