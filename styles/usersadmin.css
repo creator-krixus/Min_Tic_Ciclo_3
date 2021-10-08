@@ -63,3 +63,8 @@ tr:hover td{
 #icono a img{
     border-radius: 50%;
 }
+
+#btn-edit-data{
+    text-decoration: none;
+    color: black;
+}
