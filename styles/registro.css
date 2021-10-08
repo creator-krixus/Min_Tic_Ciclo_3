@@ -1,23 +1,35 @@
-/*Estilos del header*/
-*{
-    margin: 0;
-    padding: 0;
+:root{
+    --colorTextos: #c334bc67;
 }
 
-#registro{ 
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+body {
+    position: relative;
+    background-color: #f9f9f9;
+}
+
+/*======================================================================================
+                            Estilos del header
+======================================================================================*/
+#registro {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    background-color: rgb(92, 86, 86);      
-    width: 100%;    
+    background-color: #e3e3e3;
+    width: 100%;
 }
 
-#cabezote{
+#cabezote {
+    margin-top: 1%;
     margin-left: 2%;
 }
 
-#contenedor-btn{
+#contenedor-btn {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -25,107 +37,235 @@
     padding: 2%;
 }
 
-#nav{
+#nav {
     list-style: none;
     margin-left: 20px;
 }
 
-#btn-registrar{
+#btn-registrar {
     border-radius: 7px;
     margin-right: 20px;
     padding: 5px 15px;
     border: none;
-    background-color: darkseagreen;    
+    background-color: darkseagreen;
 }
 
-#enlace-registro{
+#enlace-registro {
     color: white;
     text-decoration: none;
     font-size: 18px;
 }
 
-#enlace-home{
-    color: white;
+#enlace-home {
+    /* color: white; */
     text-decoration: none;
     font-size: 23px;
 }
-img{
+
+img {
     margin-top: 2%;
     border-radius: 50%;
 }
 
-/*Estilos contenedor registro*/
-#container-registro{
+/*====================================================================================
+                            Estilos contenedor registro
+=====================================================================================*/
+#container-registro {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    
-    background-color: darkseagreen;
+    height: 100vh;
 }
 
-/*estilos contenedor de la imagen y el titulo*/
+/*=======================================================================================
+                           Estilos contenedor de la imagen y el titulo
+=======================================================================================*/
 
-#imagen-puzzle{
+#imagen-puzzle {
     padding-left: 45%;
-   margin-top: -45%;
+    margin-top: -45%;
 
 }
-#titulo-descriptivo-registro{
+
+#titulo-descriptivo-registro {
     margin-top: 14%;
     margin-left: 8%;
     font-size: 30px;
 }
 
-/*estilos del contenedor del formulario*/
+/*=====================================================================================
+                            Estilos del contenedor del formulario
+======================================================================================*/
 
-#container-formulario{
+#container-formulario {
     padding: 2%;
     width: 35%;
     margin-left: 31%;
 }
 
-#titulo{
+#container-formulario #form-registro h1 {
     text-align: center;
-    padding: 5px 20px 20px;
-    /* background-color: rgba(37, 199, 37, 0.808);  */   
-    border-radius: 10px 10px 0 0;    
+    font-weight: 700;
 }
 
-#label{
+#container-formulario #form-registro {
+    /* background-color: #fff; */
+    padding: 40px 0;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+
+#form-registro {
+    width: 100%;
+    margin: auto;
+}
+form .grupo{
+    position: relative;
+    margin: 35px;
+}
+input{
+    background: none;
+    color: #c6c6c6;
+    font-size: 18px;
+    padding: 10px;
     display: block;
-    padding: 5px;    
-    margin: 10px;
-}
-
-
-#input{
+    width: 100%;
     border: none;
-    background-color: rgb(185, 184, 184);
-    border-radius: 5px;
-    height: 20px;    
-    width: 40%;
-    margin-left: 10px;
-    margin-bottom: 2%;
+    border-bottom: 1px solid var(--colorTextos);
+}
+input:focus{
+    outline: none;
+    color: #5e5d5d;
+}
+label{
+    color: var(--colorTextos);
+    font-size: 16px;
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    top: 10px;
+    transition: 0.5 ease all;
+    pointer-events: none;
+}
+input:focus~label,
+input:valid~label{
+    top: -14px;
+    font-size: 12px;
+}
+.barra{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.barra::before{
+    content: "";
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(to right, #b06ab3, #4568dc);
+    transition: 0.6s ease width;
+    left: 0;
+}
+input:focus~.barra::before{
+width: 105%;
 }
 
-#divboton{
-    text-align: center;
-}
 
-
-#btn-submit-form{    
-    margin: 30px 0 20px;    
+#btn-submit-form {
+    margin: 30px auto;
     padding: 5px 30px;
     border-radius: 8px;
-    background-color: green;
+    background-color: purple;
     color: white;
-    border: none;    
+    border: none;
+    width: 40%;
 }
 
-#form-registro{
-    
-    border-radius: 10px;
-    /* background-color:rgb(238, 238, 238);  */   
-    width: 40%;
+/*====================================================================================
+Estilos Footer
+=====================================================================================*/
+footer {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    padding: 50px 0px;
+    background-image: url(../images/background-footer.svg);
+    background-size: cover;
+    /*hace que la imagen se acomple al tamaño del elemento*/
+
+    /*con estas propiedades logramos cambiar el color de la imagen de fondo*/
+    background-color: #e3e3e3e3;
+    -webkit-mask-image: url(../images/background-footer.svg);
+    mask-image: url(../images/background-footer.svg);
+    -webkit-mask-size: cover;
+    mask-size: cover;
+}
+
+.container {
+    display: flex;
+    /*acomoda los elementos unos al lado de otros*/
+    flex-wrap: wrap;
+    /*Hace que los elementos se pongan uno debajo del otro cuando el espacio no es suficiente para estar en linea*/
+    justify-content: space-between;
+    /* para que mantengan una posicion estirada y puedan ocupar el ancho completo*/
+    max-width: 1200px;
     margin: auto;
+}
+
+.box_footer {
+    display: flex;
+    flex-direction: column;
+    /*pone sus elementos en columna*/
+    padding: 40px;
+}
+
+.box_footer .box_image img {
+    width: 50px;
+}
+
+.box_footer .description {
+    max-width: 350px;
+    margin-top: 30px;
+    font-weight: 500;
+    color: #7a7a7a;
+    font-size: 18px;
+}
+
+.box_footer h2 {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: #343434;
+    font-weight: 700;
+}
+
+.box_footer a {
+    margin-top: 10px;
+    color: #7a7a7a;
+    font-weight: 600;
+    text-decoration: none;
+
+}
+
+.box_footer a:hover {
+    opacity: 0.8;
+    /*cambiamos la opacidad de los links*/
+}
+
+.box_copyright {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 0 40px;
+}
+
+.box_copyright p {
+    margin-top: 20px;
+    color: #7a7a7a;
+}
+
+.box_copyright hr {
+    border: none;
+    height: 1px;
+    background-color: #7a7a7a;
 }

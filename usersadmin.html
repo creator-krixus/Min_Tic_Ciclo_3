@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="./images/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/usersadmin.css">   
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles/icons.css">    
+</head>
+<body>
+    <div id="icono">
+        <a href="index.html">
+            <img src="images/g9.png" alt="grupo 9" height="60px" width="60px">
+        </a>
+    </div>
+
+    <div id="container-tabla">
+        <input type="text" id="search-user" name="search-user" placeholder="Search user" >
+        <span class="material-icons-outlined">search</span>
+        <table id="tabla-contenido">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Actions</th>
+                </tr>                
+            </thead>      
+            <tbody id="data">
+            </tbody>           
+        </table>             
+    </div> 
+
+
+    
+    <div id="miModal" class="modal">
+        <div class="modal-contenido">
+            <a href="#" id="close-modal">X</a>
+            <form action="" id="form-editar">
+                <legend id="tittle">
+                    Datos
+                </legend>
+                <table id="tabla-editar">
+                    <thead>
+                        <tr>
+                                <th>Id</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <td>
+                            <input type="text">
+                        </td>
+                        <td>
+                                <input type="text">
+                        </td>
+                        <td>
+                                <input type="text">
+                        </td>
+                        <td>
+                                <input type="text">
+                        </td>
+                    </tbody>
+                </table>
+                <input type="button" id="save" value="Save" name="save" >
+            </form>
+        </div>  
+    </div>    
+    <script src="./js/userAdmin.js"></script>
+</body>
+</html>

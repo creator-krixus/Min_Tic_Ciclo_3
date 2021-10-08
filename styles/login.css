@@ -1,0 +1,145 @@
+:root{
+    --color-text: #c334bc67;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+.contenedor {
+    position: relative;
+    background-color: #f9f9f9;
+}
+
+.contenedor__datos {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 70%;
+    top: 15%;
+}
+
+.contenedor__datos form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor__datos form input {
+    margin-bottom: 10px;
+}
+
+.contenedor__datos form a {
+    margin-bottom: 10px;
+}
+
+.contenedor__fondo {
+    position: absolute;
+    right: 10px;
+    top: 6%;
+}
+.contenedor__logo{
+    position: absolute;
+    top: 2px;
+    left: 10px;
+    margin-top: 1%;
+}
+.contenedor__logo img{
+    border-radius: 50%;
+}
+
+
+/*estilos del formulario*/
+
+form{
+    background-color: none;
+    padding-top: 40px;
+    padding-bottom: 40px;    
+}
+
+.form{
+    width: 100%;
+    margin: auto;    
+}
+
+form .group{
+    position: relative;
+    margin: 35px;
+}
+
+input{
+    background: none;
+    color: #c6c6c6;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--color-text);
+    margin-bottom: 0px !important;
+}
+
+input:focus{
+    outline: none;
+    color: #5e5d5d;
+}
+
+label{
+    color: var(--color-text);
+    font-size: 16px;
+    position: absolute;
+    bottom: 0;
+    left: 5;
+    top: 10px;
+    transition: 0.5s ease all;
+    pointer-events: none;
+}
+
+input:focus~label,
+input:valid~label{
+    top: -14px;
+    font-size: 12px;    
+}
+
+.barra{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.barra::before{
+    content: "";
+    height: 2px;
+    width: 0%;
+    bottom: 0;    
+    position: absolute;
+    background: linear-gradient(to right, #b06ab3, #4568dc);
+    transition: 0.3s ease width;
+    left: 0;
+}
+
+input:focus~.barra::before{
+    width: 107%;
+}
+
+.boton{    
+    margin: 30px auto;
+    padding: 5px 30px;
+    border-radius: 8px;
+    background-color: purple;
+    color: white;
+    border: none;
+    width: 40%;
+    text-align: center;
+} 
+
+.boton a{
+    text-decoration: none;    
+    color: white;
+}
+
+
+
+
+

@@ -5,7 +5,7 @@ let checkNombre = (valor) =>{
         alert('Campo nombre incorrecto el campo debe contener minimo 4 carateres y maximo 30');
         return false;
     }
-    return true;
+    /* return true; */
 }
 
 let checkApellido = (valor) => {
@@ -15,7 +15,7 @@ let checkApellido = (valor) => {
         alert('Campo apellido incorrecto');
         return false;
     }
-    return true;
+    /* return true; */
 }
 
 let checkTelefono = (valor) => {
@@ -25,17 +25,18 @@ let checkTelefono = (valor) => {
         alert('Contenido de campo telefono debe contener 7 digitos');
         return false;
     }
-    return true;
+    /* return true; */
 }
 
 let checkCorreo = (valor) => {
     /* validación del e-mail */
-    let email = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+    /* let email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/; */
+    let email = /^[a-zA-Z0-9_.+-]+@[a-z]+\.[a-z]+$/;
     if (!(email.test(valor.email.value))) {
         alert('Campo email no es correcto ');
         return false;
     }
-    return true;
+    /* return true; */
 }
  let CheckContrasena = (valor) => {
     /* validación del password */
@@ -44,13 +45,13 @@ let checkCorreo = (valor) => {
         alert('Campo nombre incorrecto');
         return false;
     }
-    return true;
+    /* return true; */
  }
 
 let Valida = (valor) => {
     alert("Empiezan las validaciones");
     /* Validación de campos NO VACÍOS */
-    if ((valor.nombre.value.length == 0) || (valor.apellido.value.length == 0) || (valor.telefono.value.length == 0) || (valor.correo.value.length == 0) || (valor.password.value.length == 0)) {
+    if ((valor.nombre.value.length === 0) || (valor.apellido.value.length === 0) || (valor.telefono.value.length === 0) || (valor.correo.value.length === 0) || (valor.password.value.length === 0)) {
         alert('Uno o varios campos estan vacios vuelvelo a intentar');
         return false;
     }
@@ -68,4 +69,4 @@ let Valida = (valor) => {
     return true;
 }
 
-module.exports = {checkNombre, checkApellido, checkTelefono, checkCorreo, CheckContrasena}
+/* module.exports = {checkNombre, checkApellido, checkTelefono, checkCorreo, CheckContrasena} */
