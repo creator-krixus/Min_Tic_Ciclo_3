@@ -3,20 +3,28 @@ let registros = [];
 let input = document.getElementById("btn-submit-form")
 
 input.addEventListener('click', () => {
-    axios({
-        method: 'POST',
-        url:'http://localhost:3000/Usuarios',
-        data:  {
-            'nombre' : document.getElementById("nombre").value,
-            'apellido' : document.getElementById("apellido").value,
-            'telefono' : document.getElementById("telefono").value,
-            'correo' : document.getElementById("correo").value,
-            'contrasena' : document.getElementById("password").value
-        } 
-    })
-    .then(res=>console.log(res.data))
-    .catch(err => console.log(err))
-
+    if(document.getElementById("nombre").value == " " ||document.getElementById("apellido").value == " " || document.getElementById("correo").value == " " || document.getElementById("password").value == " "){
+        alert('Llenar todos los campos')
+    }else{
+        axios({
+            method: 'POST',
+            url:'http://localhost:3000/Usuarios',
+            data:  {
+                'nombre' : document.getElementById("nombre").value,
+                'apellido' : document.getElementById("apellido").value,
+                'telefono' : document.getElementById("telefono").value,
+                'correo' : document.getElementById("correo").value,
+                'contrasena' : document.getElementById("password").value
+            } 
+        })
+        .then(res=>console.log(res.data))
+        .catch(err => console.log(err))
+        document.getElementById("nombre").value = " ";
+        document.getElementById("apellido").value = " ";
+        document.getElementById("telefono").value = " ";
+        document.getElementById("correo").value = " ";
+        document.getElementById("password").value = "";
+    }
 })
 
 let agregarRegistro = () => {
