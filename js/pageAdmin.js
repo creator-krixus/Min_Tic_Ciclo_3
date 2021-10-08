@@ -3,18 +3,13 @@ function admin(){
     const password = document.getElementById("password").value;
 
 
-    if(name==="" && password===""){
-        alert('Debes llenar todos los campos')
-    }
-    if (name==="admin" && password==="admin") {
-        console.log("true");                
+    if (name==="admin" && password==="admin") {              
         location.href = "../usersadmin.html";
     }
     else{
-        console.log("false");
         location.href = "../dashboard.html";    
     }
     
-    document.getElementById("name").value = "";
-    document.getElementById("password").value = "";
+    document.getElementById("name").value = " ";
+    document.getElementById("password").value = " ";
 }
