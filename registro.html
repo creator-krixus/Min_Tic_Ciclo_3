@@ -1,56 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Registro</title>
     <link rel="stylesheet" href="./styles/registro.css">
     <link rel="shortcut icon" href="./images/favicon.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <header>
         <div id="registro">
-            <a href="index.html" id="cabezote"><img src="./images/g9.png" width="90px" height="90px"></a>
-            <div id="contenedor-btn">
+            <a href="index.html" id="cabezote"><img src="./images/g9.png" width="60px" height="60px"></a>
+<!--             <div id="contenedor-btn">
                 <li id="nav"><a href="index.html" id="enlace-home">Home</a></li>
-                <li id="nav"> 
-                    <button type="button" id="btn-registrar">
+                <li id="nav">
+                                         <button type="button" id="btn-registrar">
                         <a href="registro.html" id="enlace-registro">Registrarse</a>
                     </button>
                 </li>
-            </div>
+            </div> -->
         </div>
     </header>
     <div id="container-registro">
         <div id="container-imagen">
             <h2 id="titulo-descriptivo-registro">Discover the world is<br> top creative.</h2>
-            <img src="./images/App development-rafiki.svg" width="200%"   id="imagen-puzzle">
+            <img src="./images/App development-rafiki.svg" width="200%" id="imagen-puzzle">
         </div>
         <div id="container-formulario">
-            <form id="form-registro" onsubmit="return Valida(this)">
-                <legend id="titulo">Registro</legend>
-                <label id="label">Nombre</label>
-                <input type="text" id="nombre" name="nombre">
-                
-                <label id="label">Apellidos</label>
-                <input type="text" id="apellido" name="apellido">
-                
-                <label id="label">Telefono</label>
-                <input type="tel" id="telefono" name="telefono">
-                
-                <label id="label">Correo</label>
-                <input type="email" id="correo" name="correo">
-                
-                <label id="label">Contraseña</label>
-                <input type="password" id="password" name="password">
-                
-                <div id="divboton">
-                    <input  id="btn-submit-form" value="Registrar" onclick="llamarFunciones()">
+            <form id="form-registro">
+                <h1>Registro</h1>
+
+                <div class="grupo">
+                    <input type="text" id="nombre" name="nombre" required><span class="barra"></span>
+                    <label id="label">Nombre</label>
                 </div>
+
+                <div class="grupo">
+                    <input type="text" id="apellido" name="apellido" required><span class="barra"></span>
+                    <label id="label">Apellidos</label>
+                </div>
+
+                <div class="grupo">
+                    <input type="tel" id="telefono" name="telefono" required><span class="barra"></span>
+                    <label id="label">Telefono</label>
+                </div>
+
+                <div class="grupo">
+                    <input type="email" id="correo" name="correo" required><span class="barra"></span>
+                    <label id="label">Correo</label>
+                </div>
+
+                <div class="grupo">
+                    <input type="password" id="password" name="password" required><span class="barra"></span>
+                    <label id="label">Contraseña</label>
+                </div>
+
+                
+                    <input type="submit" id="btn-submit-form" value="Registrar" onclick="agregarRegistro()">
+                
             </form>
         </div>
     </div>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="box_footer">
+                <div class="box_image">
+                    <img src="images/g9.png">
+                    <div class="description">
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis expedita eum optio
+                            pariatur blanditiis nobis
+                            maiores libero quas et, accusantium molestiae quasi earum consectetur hic sed! Aut quod sunt
+                            exercitationem!
+                        </p>
+                    </div>
+                </div>
+            </div>
 
+            <div class="box_footer">
+                <h2>Soluciones</h2>
+                <a href="#">App Marketing</a>
+                <a href="#">App Desarrollo</a>
+            </div>
+
+            <div class="box_footer">
+                <h2>Compañia</h2>
+                <a href="#" class="class_Compañia">Acerca de</a>
+                <a href="#" class="class_Compañia">Trabajos</a>
+                <a href="#" class="class_Compañia">Procesos</a>
+                <a href="#" class="class_Compañia">Servicios</a>
+            </div>
+
+            <div class="box_footer">
+                <h2>Redes Sociales</h2>
+                <a href="#">Facebook</a>
+                <a href="#">instagram</a>
+            </div>
+        </div>
+
+        <div class="box_copyright">
+            <hr>
+            <p>
+                Derechos recervados 2021
+                <b>grupo 9</b>
+            </p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./js/registro.js"></script>
     <script src="./js/form.js"></script>
 </body>
+
 </html>
