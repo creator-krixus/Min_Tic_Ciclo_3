@@ -91,7 +91,23 @@ function llamarFunciones(){
     filtrarCorreo(registros);
 }
 
-/* module.exports.registros = registros;
-module.exports.agregarRegistro = agregarRegistro;
-module.exports.ordenarArreglo = ordenarArreglo;
-module.exports.filtrarCorreo = filtrarCorreo; */
+
+// ordena el arreglo de forma ascendente segun el apellido
+function ordenarArreglo(arreglo){
+    //creamos una funcion que compara el valor unicode para posicionar en orden alfabetico
+    arreglo.sort((a,b) => {
+        console.log(a);
+        console.log(b)
+        
+        //convertimos los apellidos a minuscula
+        const apellidoA = a.apellido.toLowerCase();
+        const apellidoB = b.apellido.toLowerCase();
+
+        if (apellidoA < apellidoB) {        
+            return -1;
+        }
+        else if (apellidoA > apellidoB) {    
+            return 1;
+        }   
+    });   
+}    
