@@ -24,13 +24,6 @@ function datos(x){
    document.getElementById("telefono").value = x.cells[4].textContent; 
 }
 
-
-
-
-
-    
-
-
 /* let guardar = document.getElementById("save");
 guardar.addEventListener('click', function(){
     console.log("hola");
