@@ -130,7 +130,15 @@ body{
 #form-editar #telefono{
     margin-bottom: 5%;
 }
-
+#form-editar #nombre{
+    margin-bottom: 5%;
+}
+#form-editar #apellido{
+    margin-bottom: 5%;
+}
+#form-editar #correo{
+    margin-bottom: 5%;
+}
 
 
 /* #datos{
