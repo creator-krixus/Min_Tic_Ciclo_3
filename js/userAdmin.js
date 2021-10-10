@@ -41,19 +41,20 @@ guardar.addEventListener('click', function(){
     window.location.href = "../usersadmin.html"
 });
 
-/*
+
 let eliminar = document.getElementById("confirmar");
 eliminar.addEventListener('click', function(){     
     axios({
         method: 'DELETE',
-        url:'http://localhost:3000/Usuarios',
+        url:`http://localhost:3000/Usuarios/${id}`,
         data:  {
             'id' : id            
         } 
         })
         .then(res=>console.log(res.data))
         .catch(err => console.log(err))
+        window.location.href = "../usersadmin.html"
 });
 
     
-   */
+   
