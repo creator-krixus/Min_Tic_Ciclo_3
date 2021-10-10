@@ -38,7 +38,7 @@ guardar.addEventListener('click', function(){
     })
     .then(res=>console.log(res.data))
     .catch(err => console.log(err))
-    window.location.href = "../usersadmin.html"
+    window.location.href = "http://127.0.0.1:5500/proyectoCiclo3/usersadmin.html";
 });
 
 
@@ -53,7 +53,7 @@ eliminar.addEventListener('click', function(){
         })
         .then(res=>console.log(res.data))
         .catch(err => console.log(err))
-        window.location.href = "../usersadmin.html"
+        window.location.href = "http://127.0.0.1:5500/proyectoCiclo3/usersadmin.html";
 });
 
     
