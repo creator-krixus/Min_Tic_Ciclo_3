@@ -4,10 +4,10 @@ function admin(){
 
 
     if (name==="admin" && password==="admin") {              
-        location.href = "../usersadmin.html";
+        window.location.href = "../usersadmin.html";
     }
     else{
-        location.href = "../dashboard.html";    
+        window.location.href = "../dashboard.html";    
     }
     
     document.getElementById("name").value = " ";

@@ -25,16 +25,15 @@
         <input type="text" id="search-user" name="search-user" placeholder="Search user" >
         <span class="material-icons-outlined">search</span>
         <table id="tabla-contenido">
-            <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Phone</th>
-                    <th>Actions</th>
-                </tr>                
-            </thead>      
-            <tbody id="data">
+            <thead>                
+                <th >Id</th>
+                <th>Name</th>
+                <th>Lastname</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Actions</th>            
+            </thead> 
+            <tbody id="data" >
             </tbody>           
         </table>             
     </div> 
@@ -43,39 +42,29 @@
     
     <div id="miModal" class="modal">
         <div class="modal-contenido">
-            <a href="#" id="close-modal">X</a>
-            <form action="" id="form-editar">
-                <legend id="tittle">
-                    Datos
-                </legend>
-                <table id="tabla-editar">
-                    <thead>
-                        <tr>
-                                <th>Id</th>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Phone</th>                            
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <td>
-                            <input type="text">
-                        </td>
-                        <td>
-                                <input type="text">
-                        </td>
-                        <td>
-                                <input type="text">
-                        </td>
-                        <td>
-                                <input type="text">
-                        </td>
-                    </tbody>
-                </table>
+            <div class="container-close">
+                <a href="#" id="close-modal">X</a>
+            </div>            
+            <form action="" id="form-editar">                
+                <label for="">Nombre</label>
+                <input type="text" id="nombre">
+                <label for="">Apellidos</label>
+                <input type="text" id="apellido">
+                <label for="">Correo</label>
+                <input type="text" id="correo">
+                <label for="">Telefono</label>
+                <input type="text" id="telefono">    
                 <input type="button" id="save" value="Save" name="save" >
             </form>
         </div>  
     </div>    
+
+    <div id="modal-delete" class="modal-delete">
+        <div class="delete">
+            <p>Se eliminaran estos datos por completo, ¿estas seguro de realizar estos cambios?</p>
+            <input type="button" id="confirmar" value="confirmar" name="confirmar">
+        </div>
+    </div>
     <script src="./js/userAdmin.js"></script>
 </body>
 </html>
