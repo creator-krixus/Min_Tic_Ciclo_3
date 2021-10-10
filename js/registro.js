@@ -1,4 +1,4 @@
-let registros = [];
+/* let registros = []; */
 
 let input = document.getElementById("btn-submit-form")
 
@@ -27,7 +27,7 @@ input.addEventListener('click', () => {
     }
 })
 
-let agregarRegistro = () => {
+/* let agregarRegistro = () => {
     
     let registro = document.getElementsByTagName("input");
     
@@ -110,4 +110,4 @@ function ordenarArreglo(arreglo){
             return 1;
         }   
     });   
-}    
+}     */
