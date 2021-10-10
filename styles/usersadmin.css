@@ -72,8 +72,9 @@ body{
     text-decoration: none;
     color: black;
 }
-
-/* Estilos del modal para realizar cambios en los datos */
+/*=====================================================================================
+                                Estilos Modal
+=======================================================================================*/
 .modal{
     background-color: rgba(0,0,0,.8);
     position:fixed;
@@ -88,10 +89,11 @@ body{
 }
 
 .modal-contenido{
+    width: 30%;
+    border-radius: 15px;
     background-color:#e3e3e3;
-    width: 1200px;
     padding: 30px 20px;
-    margin: 20% auto;
+    margin: 10% auto;
     position: relative;       
 }
 
@@ -117,10 +119,21 @@ body{
 }
 
 #form-editar{
-    text-align: center;
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    text-align: left;
 }
 
-#datos{
+#form-editar #telefono{
+    margin-bottom: 5%;
+}
+
+
+
+/* #datos{
     outline: none;
     background: none;
     border-top: none;
@@ -128,10 +141,13 @@ body{
     border-bottom: 1px solid;
     border-left: 0px;
     margin: 0px 10px;    
-}
+} */
 
 #save{
-    cursor: pointer;    
+    cursor: pointer; 
+    width: 30%;
+    background-color: blue;
+    margin: 0 auto;   
 }
 
 #miModal:target{

@@ -14,18 +14,19 @@ const mostrarData = (data) => {
 }    
 
 
-let id;
-function datos(x){         
-    id = x.cells[0].textContent;    
-    document.getElementById("nombre").value =x.cells[1].textContent;
-    document.getElementById("apellido").value = x.cells[2].textContent;
-    document.getElementById("correo").value = x.cells[3].textContent;
-    document.getElementById("telefono").value = x.cells[4].textContent; 
-}    
 
+function datos(x){
+    console.log(x.cells[0].textContent);     
 
-let guardar = document.getElementById("save");
-guardar.addEventListener('click', function(){       
+   document.getElementById("nombre").value =x.cells[1].textContent;
+   document.getElementById("apellido").value = x.cells[2].textContent;
+   document.getElementById("correo").value = x.cells[3].textContent;
+   document.getElementById("telefono").value = x.cells[4].textContent; 
+}
+
+/* let guardar = document.getElementById("save");
+guardar.addEventListener('click', function(){
+    console.log("hola");
     axios({
     method: 'POST',
     url:'http://localhost:3000/Usuarios',
@@ -56,4 +57,4 @@ eliminar.addEventListener('click', function(){
 });
 
     
-   
+   */
