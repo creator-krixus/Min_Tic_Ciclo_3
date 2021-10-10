@@ -5,7 +5,6 @@ fetch(url)
     .catch(error => console.log(error))
 
 const mostrarData = (data) => {
-    console.log(data)
     let body = ""
     for (let i = 0; i<data.length; i++){
         body += `<tr id="row" onclick="datos(this)"><td id="id">${data[i].id}</td><td>${data[i].nombre}</td><td>${data[i].apellido}</td><td>${data[i].correo}</td><td>${data[i].telefono}</td><td><button id="editar"><a href="#miModal" id="btn-edit-data">Editar</a></button>  <button><a href="#modal-delete" id="btn-edit-data">Eliminar</a></button></td></tr>`        
@@ -13,10 +12,10 @@ const mostrarData = (data) => {
     document.getElementById('data').innerHTML = body;
 }    
 
-
+let id;
 
 function datos(x){
-    console.log(x.cells[0].textContent);     
+    id = x.cells[0].textContent;     
 
    document.getElementById("nombre").value =x.cells[1].textContent;
    document.getElementById("apellido").value = x.cells[2].textContent;
@@ -24,25 +23,25 @@ function datos(x){
    document.getElementById("telefono").value = x.cells[4].textContent; 
 }
 
-/* let guardar = document.getElementById("save");
+let guardar = document.getElementById("save");
 guardar.addEventListener('click', function(){
-    console.log("hola");
     axios({
     method: 'POST',
-    url:'http://localhost:3000/Usuarios',
+    url:`http://localhost:3000/Usuarios/${id}`,
     data:  {
         'id' : id,
         'nombre' : document.getElementById("nombre").value,
-        'apellido' : document.getElementById("nombre").value,
-        'telefono' : document.getElementById("nombre").value,
-        'correo' : document.getElementById("nombre").value,
+        'apellido' : document.getElementById("apellido").value,
+        'telefono' : document.getElementById("telefono").value,
+        'correo' : document.getElementById("correo").value,
     } 
     })
     .then(res=>console.log(res.data))
     .catch(err => console.log(err))
+    window.location.href = "../usersadmin.html"
 });
 
-
+/*
 let eliminar = document.getElementById("confirmar");
 eliminar.addEventListener('click', function(){     
     axios({
