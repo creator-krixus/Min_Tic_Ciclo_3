@@ -1,7 +1,33 @@
-let registros = [];
+/* let registros = []; */
 
+let input = document.getElementById("btn-submit-form")
 
-let agregarRegistro = () => {
+input.addEventListener('click', () => {
+    if(document.getElementById("nombre").value == " " ||document.getElementById("apellido").value == " " || document.getElementById("correo").value == " " || document.getElementById("password").value == " "){
+        alert('Llenar todos los campos')
+    }else{
+        axios({
+            method: 'POST',
+            url:'https://api-ciclo3.herokuapp.com/usuarios',
+            data:  {
+                'nombre' : document.getElementById("nombre").value,
+                'apellido' : document.getElementById("apellido").value,
+                'telefono' : document.getElementById("telefono").value,
+                'correo' : document.getElementById("correo").value,
+                'contrasena' : document.getElementById("password").value
+            } 
+        })
+        .then(res=>console.log(res.data))
+        .catch(err => console.log(err))
+        document.getElementById("nombre").value = " ";
+        document.getElementById("apellido").value = " ";
+        document.getElementById("telefono").value = " ";
+        document.getElementById("correo").value = " ";
+        document.getElementById("password").value = "";
+    }
+})
+
+/* let agregarRegistro = () => {
     
     let registro = document.getElementsByTagName("input");
     
@@ -17,6 +43,7 @@ let agregarRegistro = () => {
     console.log(registros);
 
 }
+
 
 
 // ordena el arreglo de forma ascendente segun el apellido
@@ -64,7 +91,23 @@ function llamarFunciones(){
     filtrarCorreo(registros);
 }
 
-module.exports.registros = registros;
-module.exports.agregarRegistro = agregarRegistro;
-module.exports.ordenarArreglo = ordenarArreglo;
-module.exports.filtrarCorreo = filtrarCorreo;
+
+// ordena el arreglo de forma ascendente segun el apellido
+function ordenarArreglo(arreglo){
+    //creamos una funcion que compara el valor unicode para posicionar en orden alfabetico
+    arreglo.sort((a,b) => {
+        console.log(a);
+        console.log(b)
+        
+        //convertimos los apellidos a minuscula
+        const apellidoA = a.apellido.toLowerCase();
+        const apellidoB = b.apellido.toLowerCase();
+
+        if (apellidoA < apellidoB) {        
+            return -1;
+        }
+        else if (apellidoA > apellidoB) {    
+            return 1;
+        }   
+    });   
+}     */

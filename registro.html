@@ -31,7 +31,7 @@
             <img src="./images/App development-rafiki.svg" width="200%" id="imagen-puzzle">
         </div>
         <div id="container-formulario">
-            <form id="form-registro" onsubmit="return Valida(this)">
+            <form id="form-registro">
                 <h1>Registro</h1>
 
                 <div class="grupo">
@@ -59,9 +59,9 @@
                     <label id="label">Contraseña</label>
                 </div>
 
-                <!-- <div id="divboton"> -->
-                    <input type="submit" id="btn-submit-form" value="Registrar" onclick="llamarFunciones()">
-                <!-- </div> -->
+                
+                    <input type="submit" id="btn-submit-form" value="Registrar">
+                
             </form>
         </div>
     </div>
@@ -111,7 +111,8 @@
             </p>
         </div>
     </footer>
-
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./js/registro.js"></script>
     <script src="./js/form.js"></script>
 </body>
