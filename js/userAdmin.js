@@ -1,4 +1,4 @@
-let url = "http://localhost:3000/Usuarios";
+let url = "https://api-ciclo3.herokuapp.com/usuarios";
 fetch(url)
     .then(response => response.json())
     .then(data => mostrarData(data))
@@ -27,7 +27,7 @@ let guardar = document.getElementById("save");
 guardar.addEventListener('click', function(){
     axios({
     method: 'POST',
-    url:`http://localhost:3000/Usuarios/${id}`,
+    url:`https://api-ciclo3.herokuapp.com/usuarios/${id}`,
     data:  {
         'id' : id,
         'nombre' : document.getElementById("nombre").value,
@@ -46,7 +46,7 @@ let eliminar = document.getElementById("confirmar");
 eliminar.addEventListener('click', function(){     
     axios({
         method: 'DELETE',
-        url:`http://localhost:3000/Usuarios/${id}`,
+        url:`https://api-ciclo3.herokuapp.com/usuarios/${id}`,
         data:  {
             'id' : id            
         } 
