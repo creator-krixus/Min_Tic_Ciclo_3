@@ -320,10 +320,11 @@ footer{
 Media query
 ======================================================================================*/
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     .container-img #img-presentacion{
         width: 100vw;
         margin-top: 3%;
+        margin: auto;
     }
     #container-oferta-parrafo{
         margin-top: 7%;
@@ -335,13 +336,13 @@ Media query
         margin-bottom: 7%;
     }
     #contenedor-imagen-uno{
-        max-width: 770px;
+        max-width: 900px;
     }
     #contenedor-imagen-dos{
-        max-width: 770px;
+        max-width: 900px;
     }
     #contenedor-imagen-tres{
-        max-width: 770px;
+        max-width: 900px;
     }
     .contenedor__uno {
         width: 15%;
