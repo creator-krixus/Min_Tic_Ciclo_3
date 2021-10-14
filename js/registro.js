@@ -8,7 +8,7 @@ input.addEventListener('click', () => {
     }else{
         axios({
             method: 'POST',
-            url:'http://localhost:3000/Usuarios',
+            url:'https://api-ciclo3.herokuapp.com/usuarios',
             data:  {
                 'nombre' : document.getElementById("nombre").value,
                 'apellido' : document.getElementById("apellido").value,
