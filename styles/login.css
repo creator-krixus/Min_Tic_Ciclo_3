@@ -102,6 +102,29 @@ input:valid~label{
     font-size: 12px;    
 }
 
+
+#captcha~#texto{       
+    font-size: 13px;  
+    top:2px;          
+}
+
+input[type="checkbox"]{
+    display: inline;
+    width:5%;
+}
+
+input[type="checkbox"]~#texto{
+    left: 20px;
+    font-size: 20px !important;
+    top: -5px !important;
+}
+
+#captcha:focus~#texto,
+#captcha:valid~#texto{
+    top: -30px;
+    font-size: 14px;        
+}
+
 .barra{
     position: relative;
     display: block;

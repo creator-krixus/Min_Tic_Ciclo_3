@@ -22,15 +22,19 @@
             <form action="" id="form">
                 <div class="form">
                     <div class="group">
-                        <input type="text" id="name" required> <span class="barra"></span>   
-                        <label for="">Nombre</label>
+                        <input type="text" id="correo" required> <span class="barra"></span>   
+                        <label for="">Correo</label>
                     </div>
                     <div class="group">
-                        <input type="password" id="password" required> <span class="barra"></span>
-                        <label for="">Password</label>
-                    </div>        
+                        <input type="password" id="contrasena" required> <span class="barra"></span>
+                        <label for="">contraseña</label>
+                    </div> 
+                    <div class="group">
+                        <input type="checkbox" id="captcha" required> <span class="barra"></span>
+                        <label for="" id="texto">captcha</label>
+                    </div>       
                     <div class="boton">
-                        <a onclick="admin()" id="redireccion">Log In</a>
+                        <a onclick="login()" id="redireccion">Log In</a>
                     </div>        
                     
                 </div>
@@ -45,8 +49,8 @@
     <div class="contenedor__logo">
         <a href="index.html"><img src="./images/g9.png" alt="" width="60px" height="60px"></a>
         
-    </div>
-    
+    </div>    
     <script src="js/pageAdmin.js"></script>
+    <script src="js/login.js"></script>
 </body>
 </html>
